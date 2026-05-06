@@ -1,0 +1,184 @@
+:root {
+    --pink: #ff599c;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "about"
+        "skills"
+        "projects"
+        "contact"
+        "footer";
+    gap: 20px;
+
+    font-family: Arial;
+    margin: 0;
+
+    background: linear-gradient(-45deg, #ffe6f0, #ffd6e8, #ffb6c1);
+    background-size: 400% 400%;
+    animation: bg 6s infinite;
+}
+
+@keyframes bg {
+    0% { background-position: 0% }
+    50% { background-position: 100% }
+    100% { background-position: 0% }
+}
+
+/* HEADER */
+#header {
+    grid-area: header;
+    background: linear-gradient(to right, #ff66a3, #ffb6c1);
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.nav a:hover {
+    background: white;
+    color: var(--pink);
+}
+
+.active {
+    background: #fd89b7;
+}
+
+/* ABOUT */
+#about {
+    grid-area: about;
+    background: white;
+    padding: 20px;
+}
+
+#about img {
+    float: left;
+    width: 120px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+#skills {
+    grid-area: skills;
+    padding: 20px;
+    background: radial-gradient(circle, #ffd6e8, #ff99c8);
+}
+
+.bar {
+    background: #ddd;
+}
+
+.fill {
+    height: 10px;
+    background: var(--pink);
+    animation: fill 2s;
+}
+
+.html { width: 90%; }
+.css { width: 80%; }
+
+@keyframes fill {
+    from { width: 0; }
+}
+
+#projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project {
+    border: 2px solid var(--pink);
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px pink;
+}
+
+/* CONTACT */
+#contact {
+    grid-area: contact;
+    padding: 20px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: red;
+}
+
+button {
+    background: var(--pink);
+    color: white;
+    padding: 8px;
+    border: none;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+.pagination a {
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid var(--pink);
+    margin: 5px;
+}
+
+.pagination a:hover {
+    background: var(--pink);
+    color: white;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    background: var(--pink);
+    color: white;
+    padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+    #projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav li {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    #projects {
+        grid-template-columns: 1fr;
+    }
+}

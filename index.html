@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Akshara Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header id="header">
+    <h1>Akshara Shrivastav</h1>
+    <p>Web Developer — Student — Designer</p>
+
+    <ul class="nav">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <img src="tohru.jpg">
+    <p>
+        Hi! I'm Akshara Shrivastav, a first-year BTech CSE student who enjoys turning ideas into websites.
+        From building MiniWiki to blogs and recipe sites, I love experimenting with code and design.
+        I'm currently learning HTML, CSS, and improving step by step while enjoying the process.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="skill">
+        <p>HTML</p>
+        <div class="bar"><div class="fill html"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>CSS</p>
+        <div class="bar"><div class="fill css"></div></div>
+    </div>
+
+</section>
+
+<section id="projects">
+    <div class="project">
+        <h3>MiniWiki</h3>
+        <p>Wikipedia-style informational website.</p>
+    </div>
+
+    <div class="project">
+        <h3>Personal Blog</h3>
+        <p>Simple blog layout for content sharing.</p>
+    </div>
+
+    <div class="project">
+        <h3>Recipe Website</h3>
+        <p>Recipe-based structured website.</p>
+    </div>
+</section>
+<h2>JavaScript Interaction Panel</h2>
+
+<button onclick="welcome()">Welcome</button>
+<button onclick="startQuiz()">Start Quiz</button>
+<button onclick="addSkills()">Enter Skills</button>
+<button onclick="checkGrade()">Check Grade</button>
+<section id="contact">
+    <h2>Contact</h2>
+
+    <form>
+        <input type="text" placeholder="Name"><br><br>
+        <input type="email" placeholder="Email"><br><br>
+        <textarea placeholder="Message"></textarea><br><br>
+        <button>Send</button>
+    </form>
+</section>
+
+<div class="pagination">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#" class="active">3</a>
+</div>
+
+<footer>
+    <p>© 2026 Akshara Shrivastav</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
